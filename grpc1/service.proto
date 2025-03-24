@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+service BotService {
+  rpc SendMessage (SendMessageRequest) returns (SendMessageResponse);
+}
+
+message SendMessageRequest {
+  string channel_id = 1;
+  string message = 2;
+}
+
+message SendMessageResponse {
+  string status = 1;
+  string error = 2;
+}
